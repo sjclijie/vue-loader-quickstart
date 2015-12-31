@@ -1,20 +1,33 @@
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
+
+
+
+
 module.exports = {
 
-    entry: './main.js',
+    //entry: ['bootstrap', './main.js'],
+    entry: {
+        'bootstrap': './main.js'
+    },
 
     output: {
         path: './dist/',
-        publicPath: 'dist',
-        filename: 'build.js'
+        filename: '[name].js'
     },
 
     module: {
         loaders: [
             { test: /\.vue$/, loader: 'vue' },
-            { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
+            { test: /\.js$/, loader: 'babel', exclude: /node_modules/ }
         ]
     },
+
+    plugins: [
+        //new webpack.optimize.CommonsChunkPlugin('basic.js'),
+        //new ExtractTextPlugin('test.css')
+    ],
 
     babel: {
         'presets': ['es2015', 'stage-0'],
