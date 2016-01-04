@@ -1,16 +1,17 @@
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 var webpack = require('webpack');
 
-
-
+var entry = {
+    'bootstrap': './main.js',
+    'components/title': './components/title/index.js',
+    'components/test': './components/test/index.js',
+};
 
 module.exports = {
 
-    //entry: ['bootstrap', './main.js'],
-    entry: {
-        'bootstrap': './main.js'
-    },
+    entry: entry,
 
     output: {
         path: './dist/',
@@ -25,12 +26,27 @@ module.exports = {
     },
 
     plugins: [
-        //new webpack.optimize.CommonsChunkPlugin('basic.js'),
-        //new ExtractTextPlugin('test.css')
+        new webpack.optimize.CommonsChunkPlugin('vue.js'),    //提取公用
+        new webpack.optimize.UglifyJsPlugin({                 //压缩
+            compress : {
+                warnings : false
+            }
+        }),
+        new webpack.optimize.OccurenceOrderPlugin(),         //优化id
+        new ExtractTextPlugin('[name].css'),
     ],
-
     babel: {
         'presets': ['es2015', 'stage-0'],
         'plugins': ['transform-runtime']
+    },
+    vue: {
+        loaders: {
+            css: ExtractTextPlugin.extract('css'),
+            less: ExtractTextPlugin.extract('css!less'),
+            sass: ExtractTextPlugin.extract('css!sass')
+        },
+        autoprefixer: {
+            browsers: ['last 2 versions']
+        }
     }
 };

@@ -1,11 +1,15 @@
 
-<style scoped>
+<style scoped lang="sass">
+
+    @import "../px2rem.scss";
+
     h3 {
         display: block;
-        height: 50px;
-        line-height: 50px;
+        height: px2rem(100);
+        line-height: px2rem(100);
         text-align: center;
         background: #ff0000;
+        border-radius: 10px;
         color: yellow;
     }
 </style>
@@ -17,6 +21,7 @@
 </template>
 
 <script>
+
     export default {
         data () {
             return { msg : 'jaylee jaylee' };
