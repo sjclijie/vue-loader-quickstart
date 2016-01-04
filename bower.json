@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jaylee <sjclijie@vip.qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sjclijie/vue-loader-quickstart",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "zepto": "~1.1.6",
+    "underscore": "~1.8.3"
+  }
+}

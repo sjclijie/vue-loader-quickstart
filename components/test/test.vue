@@ -12,6 +12,7 @@
         border-radius: 10px;
         color: yellow;
     }
+
 </style>
 
 <template>
@@ -21,6 +22,15 @@
 </template>
 
 <script>
+
+    //import $ from 'zepto'
+
+//    import $ from 'webpack-zepto'
+//    import { map } from 'lodash'
+
+    console.log($);
+
+    console.log(_);
 
     export default {
         data () {
