@@ -4,9 +4,9 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require('webpack');
 
 var entry = {
-    'bootstrap': './main.js',
-    'components/title': './components/title/index.js',
-    'components/test': './components/test/index.js',
+    'bootstrap': './src/bootstrap.js',
+    'components/title': './src/components/title/index.js',
+    'components/test': './src/components/test/index.js',
 };
 
 //var ignoreFiles = new webpack.IgnorePlugin(/\.\/jquery-last.js$/);
@@ -42,7 +42,7 @@ module.exports = {
     },*/
 
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vue.js'),    //提取公用
+        new webpack.optimize.CommonsChunkPlugin('common/vue.js'),    //提取公用
         new webpack.optimize.UglifyJsPlugin({                 //压缩
             compress : {
                 warnings : false
