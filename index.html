@@ -1,8 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Vue Webpack</title>
+    <script src="static/js/hotcss.js"></script>
+    <style>
+
+        /**
+            html5 css reset
+            from: http://www.zhangxinxu.com/wordpress/2010/08/html5-css-reset/
+        */
+
+        html, body, div, span, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,
+        small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section, summary,
+        time, mark, audio, video {
+            margin:0;
+            padding:0;
+            border:0;
+            outline:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+        body {
+            line-height:1;
+        }
+
+        :focus {
+            outline: 1;
+        }
+
+        article,aside,canvas,details,figcaption,figure,
+        footer,header,hgroup,menu,nav,section,summary {
+            display:block;
+        }
+
+        nav ul {
+            list-style:none;
+        }
+
+        blockquote, q {
+            quotes:none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content:'';
+            content:none;
+        }
+
+        a {
+            margin:0;
+            padding:0;
+            border:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+        ins {
+            background-color:#ff9;
+            color:#000;
+            text-decoration:none;
+        }
+
+        mark {
+            background-color:#ff9;
+            color:#000;
+            font-style:italic;
+            font-weight:bold;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        abbr[title], dfn[title] {
+            border-bottom:1px dotted #000;
+            cursor:help;
+        }
+
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+
+        hr {
+            display:block;
+            height:1px;
+            border:0;
+            border-top:1px solid #cccccc;
+            margin:1em 0;
+            padding:0;
+        }
+
+        input, select {
+            vertical-align:middle;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./static/css/mui.css" />
 </head>
 <body>
 
@@ -17,6 +121,7 @@
     <script src="bower_components/zepto/zepto.min.js"></script>
     <!--<script src="bower_components/lodash/lodash.min.js"></script>-->
     <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
 
     <script src="dist/common/vue.js"></script>
 

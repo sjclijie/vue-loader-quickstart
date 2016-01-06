@@ -17,6 +17,7 @@ module.exports = {
 
     output: {
         path: './dist/',
+        publicPath: '/dist/',
         filename: '[name].js'
     },
 
@@ -76,7 +77,10 @@ module.exports = {
             browsers: ['last 2 versions']
         }
     },
-    //devtool: '#source-map'
+    devtool: '#source-map',
+    devServer: {
+        noInfo: true
+    }
 };
 
 
