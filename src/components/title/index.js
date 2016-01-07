@@ -1,4 +1,4 @@
 import Vue from 'vue'
 import Title from './title.vue'
 
-Vue.component('title', Title)
+Vue.component('an-alert', Title)

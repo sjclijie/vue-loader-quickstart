@@ -3,38 +3,37 @@
 
     @import "../px2rem.scss";
 
-    h3 {
-        display: block;
-        height: px2rem(100);
-        line-height: px2rem(100);
-        text-align: center;
-        background: #ff0000;
-        border-radius: 10px;
-        color: yellow;
-    }
+    h3 {}
 
 </style>
 
 <template>
-    <h3>
-        {{ msg }}
-    </h3>
+
+    <a class="btn" @click.prevent="show=true">confirm</a>
+
+<!--
+    <confirm :show.sync="show"
+             :title="title",
+             :content="content">
+    </confirm>
+-->
+
 </template>
 
 <script>
 
-    //import $ from 'zepto'
-
-//    import $ from 'webpack-zepto'
-//    import { map } from 'lodash'
-
-    console.log($);
-
-    console.log(_);
+    import { confirm } from 'vue-mui'
 
     export default {
         data () {
-            return { msg : 'jaylee jaylee' };
+            return {
+                sync: false,
+                title: '测试title .... ',
+                content: '测试content ... '
+            };
+        },
+        component: {
+//            confirm
         }
     }
 </script>

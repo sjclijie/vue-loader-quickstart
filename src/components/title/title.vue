@@ -1,5 +1,5 @@
 
-<style scoped lang="sass">
+<style lang="sass">
 
     @import "../px2rem.scss";
     
@@ -21,29 +21,31 @@
     <alert :show.sync="show"
            :title="title"
            :content="content">
-
     </alert>
 
 </template>
 
 <script>
 
-    import confirm from 'vue-mui';
+    import { alert } from 'vue-mui';
 
     export default {
         data () {
             return {
                 show: false,
-                title: "This is title (optional)",
-                content: 'This is content'
+                title: "测试标题111111",
+                content: '测试内容222222'
             };
         },
+
         components: {
-            confirm
+            alert
         },
 
         methods: {
-            
+            alert(){
+                this.show = true;
+            }
         },
 
         events: {
