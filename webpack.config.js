@@ -4,12 +4,13 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require('webpack');
 
 var entry = {
+    //'lib/zepto': 'webpack-zepto',
     'bootstrap': './src/bootstrap.js',
     'components/title': './src/components/title/index.js',
     'components/test': './src/components/test/index.js',
 };
 
-//var ignoreFiles = new webpack.IgnorePlugin(/\.\/jquery-last.js$/);
+//var ignoreFiles = new webpack.IgnorePlugin(/zepto/);
 
 module.exports = {
 
@@ -44,15 +45,15 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('common/vue.js'),    //提取公用
-        new webpack.optimize.UglifyJsPlugin({                 //压缩
+        /*new webpack.optimize.UglifyJsPlugin({                 //压缩
             compress : {
                 warnings : false
             },
             mangle: {
                 except: ['$super', '$', 'exports', 'require']  //不压缩这些关键字
             }
-        }),
-        new webpack.optimize.OccurenceOrderPlugin(),         //优化id
+        }),*/
+        //new webpack.optimize.OccurenceOrderPlugin(),         //优化id
         new ExtractTextPlugin('[name].css'),                 //提取css
         //new webpack.IgnorePlugin(/zepto(\.min)?/)
         /*new HtmlWebpackPlugin({                              //文件内容替换
@@ -77,7 +78,7 @@ module.exports = {
             browsers: ['last 2 versions']
         }
     },
-    devtool: '#source-map',
+    //devtool: '#source-map',
     devServer: {
         noInfo: true
     }
