@@ -24,7 +24,7 @@
 
     //import { confirm } from '../../ui-components/vue-mui/dist/mui.js';
 
-    import confirm from '../../ui-components/vue-mui/src/components/confirm.vue'
+    //import confirm from '../../ui-components/vue-mui/src/components/confirm.vue'
 
     export default {
         data () {
@@ -51,7 +51,7 @@
             }
         },
         components: {
-            confirm
+//            confirm
         }
     }
 </script>

@@ -1,13 +1,13 @@
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+var OpenBrowerPlugin = require('open-browser-webpack-plugin');
 var webpack = require('webpack');
 
 var entry = {
     //'lib/zepto': 'webpack-zepto',
     'bootstrap': './src/bootstrap.js',
     'components/title': './src/components/title/index.js',
-    'components/test': './src/components/test/index.js',
+    //'components/test': './src/components/test/index.js',
 };
 
 //var ignoreFiles = new webpack.IgnorePlugin(/zepto/);
@@ -63,6 +63,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'webpack-zepto'
         })*/
+        new OpenBrowerPlugin( { url: 'http://localhost:8899' } )
     ],
     babel: {
         'presets': ['es2015', 'stage-0'],

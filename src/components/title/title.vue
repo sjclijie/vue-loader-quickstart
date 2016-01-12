@@ -71,7 +71,7 @@
 
 <script>
 
-    import { alert } from 'vue-mui';
+    //import { alert } from 'vue-mui';
 
     require.ensure([], function() {
 
@@ -79,8 +79,11 @@
 
         var $ = require('../../../static/js/zepto.js');
 
-        console.log( $ );
-    });
+        console.log($);
+
+    }, 'zepto');
+
+
 
 
     /*
@@ -109,7 +112,7 @@
         },
 
         components: {
-            alert
+//            alert
         },
 
         methods: {
