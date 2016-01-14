@@ -71,8 +71,14 @@
 
 <script>
 
+    console.log( $ );
+
     //import { alert } from 'vue-mui';
 
+    //import { $ } from 'webpack-zepto';
+    //console.log( $ );
+
+    /*
     require.ensure([], function() {
 
         //var $ = require("webpack-zepto");
@@ -82,9 +88,7 @@
         console.log($);
 
     }, 'zepto');
-
-
-
+    */
 
     /*
     var a = require("a");
@@ -103,6 +107,7 @@
     */
 
     export default {
+
         data () {
             return {
                 show: false,
